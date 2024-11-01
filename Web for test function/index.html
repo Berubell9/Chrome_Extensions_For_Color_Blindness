@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.7.1.js"></script>
+        <title>Colorblind</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Test -->
+            <div class="img-test">
+                <img src="image/ishihara.jpg" alt="ishihara">
+                <img src="https://media.tenor.com/JPKl1ypY2AkAAAAM/colors.gif" alt="cycle color">
+            </div>
+            <div class="text-test">
+                <div class="text-1">
+                    <h1 style="color: red;">Hello World</h1>
+                    <h2 style="color: Green;">Hello World</h2>
+                    <h3 style="color: blue;">Hello World</h3>
+                    <p style="color: aquamarine;">Hello World</p>
+                    <p style="color:coral;">Hello World</p>   
+                    <p style="color: yellow;">Hello World</p>
+                    <p style="color:blueviolet;">Hello World</p>  
+                </div>
+                <div class="text-2">
+                    <div class="color-1">H</div>
+                    <div class="color-2">H</div>
+                    <div class="color-3">H</div>
+                    <div class="color-4">H</div>
+                    <div class="color-5">H</div>
+                    <div class="color-6">H</div>
+                    <div class="color-7">H</div>
+                    <div class="color-8">H</div>
+                    <div class="color-9">H</div>
+                    <div class="color-10">H</div>
+                    <div class="color-11">H</div>
+                    <div class="color-12">H</div>
+                    <div class="color-13">H</div>
+                    <div class="color-14">H</div>
+                    <div class="color-15">H</div>
+                    <div class="color-16">H</div>
+                    <div class="color-17">H</div>
+                    <div class="color-18">H</div>
+                </div>
+                <div class="video">
+                    <iframe width="500" height="270" src="https://www.youtube.com/embed/yxnDz_OtF5s" title="Color Blindness Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+           
+            <div class="content">
+                <div class="logo">
+                    <img src="image/logo.png">
+                </div>
+                
+                <!-- Color -->
+                <div class="color">
+                    <div class="color-dark-orage"></div>
+                    <div class="color-orage"></div>
+                    <div class="color-light-orage"></div>
+                    <div class="color-yellow"></div>
+                    <div class="color-light-green"></div>
+                    <div class="color-green"></div>
+                    <div class="color-red"></div>
+                    <div class="color-wine"></div>
+                    <div class="color-purple"></div>
+                    <div class="color-dark-blue"></div>
+                    <div class="color-blue"></div>
+                    <div class="color-cyan"></div>
+                </div>
+
+                <h1>ฟิลเตอร์ปรับสีสำหรับผู้ที่มีภาวะตาบอดสี</h1>
+                <p class="detail">เลือกประเภทภาวะตาบอดสี</p>
+                
+                <!-- Helping Color Blindness Button -->
+                <div class="btn-container-H">
+                    <button id="normalBtn" class="btn-H">
+                        Normal Vision
+                        <span class="tooltiptext">กลับสู่สายตาปกติ</span>
+                    </button>
+                    <button id="protanopeBtn" class="btn-H">
+                        Protanope
+                        <span class="tooltiptext">ตาบอดสีเเดง</span>
+                    </button>
+                    <button id="deuteranopeBtn" class="btn-H">
+                        Deuteranope
+                        <span class="tooltiptext">ตาบอดสีเขียว</span>
+                    </button>
+                    <button id="tritanopeBtn" class="btn-H">
+                        Tritanope
+                        <span class="tooltiptext">ตาบอดสีน้ำเงิน</span>
+                    </button>
+                </div>
+
+                 <!-- Slider for adjusting saturation -->
+                 <div class="slider-container">
+                    <label for="saturation">ความเข้มสี (Adjust Saturation)</label>
+                    <input
+                        type="range"
+                        id="saturationSlider"
+                        min="0"
+                        max="3"
+                        step="0.1"
+                        value="1"
+                    />  
+                    <span id="saturationValue">100%</span>
+                </div>
+
+                <!-- Color Blindness Simulator Button -->
+                <div class="simulator">
+                    <h1>ฟิลเตอร์จำลองภาวะตาบอดสี</h1>
+                    <p class="detail">เลือกประเภทภาวะตาบอดสี</p>
+                    <div class="btn-container-S">
+                        <button id="protanomaly_S" class="btn-S">
+                            Protanomaly
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีเเดง<br><u>บกพร่อง</u></b> <small>ทำให้เเยกเเยะสีเเดง, ส้ม, เหลือง ออกจากสีเขียวได้ยาก</small></span>
+                        </button>
+                        <button id="protanopia_S" class="btn-S">
+                            Protanopia
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีเเดง<br><u>ขาดหาย</u></b> <small>ทำให้มองเห็นสีเเดงเป็นดำ เเละเทาทั้งหมด</small></span>
+                        </button>
+                        <button id="deuteranomaly_S" class="btn-S">
+                            Deuteranomaly
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีเขียว<br><u>บกพร่อง</u></b> <small>ทำให้เเยกเเยะสีเขียว ออกจากสีเเดง, ส้ม, เหลืองได้ยาก</small></span>
+                        </button>
+                        <button id="deuteranopia_S" class="btn-S">
+                            Deuteranopia
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีเขียว<br><u>ขาดหาย</u></b> <small>ทำให้มองเห็นสีเขียวเป็นดำ เเละเทาทั้งหมด</small></span>
+                        </button>
+                        <button id="tritanomaly_S" class="btn-S">
+                            Tritanomaly
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีน้ำเงิน<br><u>บกพร่อง</u></b> <small>ทำให้เเยกเเยะสีน้ำเงิน, เขียว, เเดง, เหลืองได้ยาก</small></span>
+                        </button>
+                        <button id="tritanopia_S" class="btn-S">
+                            Tritanopia
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยสีน้ำเงิน<br><u>ขาดหาย</u></b> <small>ทำให้เเยกเเยะสีที่ผสมกับสีน้ำเงินไม่ได้</small></span>
+                        </button>
+                        <button id="achromatomaly_S" class="btn-S">
+                            Achromatomaly
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยทุกสี<br><u>บกพร่อง</u></b> <small>ทำให้เห็นทุกสีไปในโทนมืดทั้งหมด</small></span>
+                        </button>
+                        <button id="achromatopsia_S" class="btn-S">
+                            Achromatopsia
+                            <span class="tooltiptext"><b>เซลล์รูปกรวยทุกสี<br><u>ขาดหาย</u></b> <small>ทำให้เห็นทุกสีเป็นดำ เเละเทาทั้งหมด</small></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Color Picker -->
+                 <div class="color-picker">
+                    <h1>ดูดสี</h1>
+                    <input type="color" id="colorInput" class="colorInput" value="#ff0000">
+                    <div class="color-info">
+                        <p>HEX : <span id="hexValue">#ff0000</span></p>
+                        <p>RGB : <span id="rgbValue">rgb(255, 0, 0)</span></p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+        <script src="colorBlind.js"></script>
+        <script src="colorSimulator.js"></script>
+        <script src="colorPicker.js"></script>
+        
+    </body>
+</html>
