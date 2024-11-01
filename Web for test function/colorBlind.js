@@ -109,7 +109,7 @@ $(document).ready(() => {
         });
     }
 
-    var $elements = $("body *:not(button)");
+    var $elements = $("body *:not(.btn-container-S *):not(.btn-container-H *)");
     var $images = $("img");
 
     // เก็บค่าสีต้นฉบับเมื่อเริ่มต้น

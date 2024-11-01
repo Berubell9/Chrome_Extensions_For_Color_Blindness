@@ -2,7 +2,7 @@
 
 body{
     font-family: "Kanit", sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 .container{
     justify-content: flex-start;
@@ -24,6 +24,31 @@ body{
 .text-1 p , .text-1 h1, .text-1 h2 ,.text-1 h3{
     margin: 0px;
 }
+.test-1 button{
+    width: 100px;
+    height: 100px;
+}
+.btn-1{
+    color:#356bad; 
+    background-color:#7deeae;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.btn-1:active{
+    background-color:#6ad297;
+}
+.btn-2{
+    color:#7b4967; 
+    background-color:cornflowerblue;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.btn-2:hover{
+    background-color:rgb(59, 103, 184);
+}
+
 .video{
     margin-left: 40px;
     border: 1px solid #ccc;
